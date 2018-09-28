@@ -3,14 +3,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule, MatCardModule, MatButtonModule} from '@angular/material';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { PlaceCreateComponent } from './places/place-create/place-create.component';
+import { MapCreateComponent } from './places/map-create/map-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlaceCreateComponent
+    PlaceCreateComponent,
+    MapCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { PlaceCreateComponent } from './places/place-create/place-create.compone
     FormsModule,
     MatInputModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    AgmCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
