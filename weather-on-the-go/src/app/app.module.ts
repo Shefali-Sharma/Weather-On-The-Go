@@ -22,7 +22,9 @@ import { MapCreateComponent } from './places/map-create/map-create.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    AgmCoreModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB09T0-SCd3IMwYWmxOiqknt-7iw2m0wbY'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,3 +30,11 @@ Download Visual Studio Code from ```code.visualstudio.com``` and install it.
 * Open your project.
 * Under 'View' open 'Extentions'
 * Search for 'Angular Essentials' and install the extention
+
+### Angular Google Maps (AGM)
+Install using command:
+* ```npm install @agm/core --save```
+
+#### Documentation
+To go the link below to get started:
+```https://angular-maps.com/guides/getting-started/```

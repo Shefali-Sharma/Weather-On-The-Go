@@ -1,3 +1,7 @@
-<h1>
-  Google Map Here
-</h1>
+ <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+  <agm-marker
+    [latitude]="latitude"
+    [longitude]="longitude"
+    *ngIf="locationChosen">
+  </agm-marker>
+</agm-map>
