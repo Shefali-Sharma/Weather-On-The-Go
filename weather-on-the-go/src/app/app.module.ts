@@ -8,6 +8,7 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { PlaceCreateComponent } from './places/place-create/place-create.component';
 import { MapCreateComponent } from './places/map-create/map-create.component';
+import { AgmDirectionModule } from 'agm-direction';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MapCreateComponent } from './places/map-create/map-create.component';
     MatButtonModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB09T0-SCd3IMwYWmxOiqknt-7iw2m0wbY'
-    })
+    }),
+    AgmDirectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
