@@ -1,3 +1,5 @@
- <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
-    <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
-</agm-map>
+<mat-card>
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+        <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+    </agm-map>
+</mat-card>

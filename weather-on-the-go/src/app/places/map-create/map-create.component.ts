@@ -16,8 +16,8 @@ export class MapCreateComponent {
     this.latitude = event.coords.lat;
     this.longitude = event.coords.lng;
     // this.locationChosen = true;
-    this.origin = { lat: 24.799448, lng: 120.979021 }
-    this.destination = { lat: 24.799524, lng: 120.975017 }
+    this.origin = { lat: 24.799448, lng: 120.979021 };
+    this.destination = { lat: 24.799524, lng: 120.975017 };
   }
 }
 

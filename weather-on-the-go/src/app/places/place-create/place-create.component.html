@@ -5,6 +5,7 @@
           matInput
           type="text"
           name="source"
+          placeholder="Source"
           ngModel
           required
           minlength="3"
@@ -16,6 +17,7 @@
           matInput
           rows="6"
           name="destination"
+          placeholder="Destination"
           ngModel
           required
           #destination="ngModel">
@@ -23,10 +25,7 @@
       </mat-form-field>
       <button
           mat-raised-button
-          color="warn"
+          color="primary"
           type="submit"> Get Route </button>
     </form>
 </mat-card>
-
-<label>Source: </label><input>
-<label>Destination: </label><input>
