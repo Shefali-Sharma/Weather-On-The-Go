@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-place-create',
@@ -6,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./place-create.component.css']
 })
 export class PlaceCreateComponent {
-
-  tempFunc() {
-    console.log('Here');
+  onGetRoute(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
   }
 }
