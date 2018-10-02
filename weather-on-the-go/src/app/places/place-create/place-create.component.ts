@@ -11,5 +11,6 @@ export class PlaceCreateComponent {
     if (form.invalid) {
       return;
     }
+    form.resetForm();
   }
 }
