@@ -38,3 +38,9 @@ Install using command:
 #### Documentation
 To go the link below to get started:
 ```https://angular-maps.com/guides/getting-started/```
+
+### Installing Express
+```npm install --save express```
+
+### Installing nodemon
+```npm install --save-dev nodemon```
