@@ -51,9 +51,17 @@ To go the link below to get started:
 * ```2.87.0``` is the current version of the 'request' package at the time of the creation of this project. Please replace this with latest version from 'Version' given at https://www.npmjs.com/package/request.
 * ```--save``` will save the installed package information in ```package.json```. This way we will not have to install request every time we restart the system(reboot the computer).
 
-## npm Axios
+### npm Axios
 For documentation on axios, visit: ```https://www.npmjs.com/package/axios```
 
-### Installing axios
+#### Installing axios
 npm install axios@0.18.0 --save
 * At the time ```0.18.0``` was the latest version. Go ahead and install the latest version. Find version info on the Documentation url.
+
+### npm google_directions
+For documentation on google_directions, visit: 
+```https://www.npmjs.com/package/google_directions```
+
+#### Installing google_directions
+```npm i google_directions@0.6.0 --save```
+* At the time ```0.6.0``` was the latest version. Go ahead and install the latest version. Find version info on the Documentation url.
