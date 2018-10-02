@@ -1,5 +1,4 @@
-var map = require('google_directions');
-
+const map = require('google_directions');
 var params = {
   origin: 'Buffalo',
   destination: 'Chicago',
@@ -37,8 +36,16 @@ map.getDirections(params, function (err, data) {
     };
     wayPoints.push(point);
   });
+
+  var res = {
+    endLoc: endLoc,
+    startLoc: startLoc,
+    wayPoints: wayPoints
+  };
   // console.log('Data:');
-  // console.log(wayPoints);
-  // console.log(endLoc);
-  // console.log(startLoc);
+  // console.log(res);
+  console.log(wayPoints);
+  console.log(endLoc);
+  console.log(startLoc);
+  return res;
 });
