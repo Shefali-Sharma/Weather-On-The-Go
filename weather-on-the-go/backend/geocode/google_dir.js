@@ -44,8 +44,10 @@ map.getDirections(params, function (err, data) {
   };
   // console.log('Data:');
   // console.log(res);
-  console.log(wayPoints);
-  console.log(endLoc);
-  console.log(startLoc);
+  // console.log(wayPoints);
+  // console.log(endLoc);
+  // console.log(startLoc);
   return res;
 });
+
+module.exports.getDirections = map.getDirections;
