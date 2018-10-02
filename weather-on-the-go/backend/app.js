@@ -1,24 +1,20 @@
-const yargs = require('yargs');
 const express = require('express');
 const geocode = require('./geocode/google_dir');
 const weather = require('./weather/weather-promises');
 
 
 geocode.getWayPoints('Buffalo, NY', 'Chicago').then((res) => {
-  console.log(res);
+  console.log(res.wayPoints);
 }, (errorMessage) => {
   console.log(errorMessage);
 });
 
-// const argv = yargs
-//   .options({
-//   a:{
-//     demand: false,
-//     alias: 'address',
-//     describe: 'Address to fetch weather for',
-//     string: true
-//   }
-// })
+weather.getWeatherInfo('Buffalo, NY').then((res) => {
+    console.log(res);
+  }, (errorMessage) => {
+    console.log(errorMessage);
+});
+
 
 // // const app = express();
 
