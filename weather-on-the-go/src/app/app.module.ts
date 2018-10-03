@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import {
     MatInputModule,
     MatCardModule,
@@ -33,7 +34,8 @@ import { HeaderComponent } from './header/header.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB09T0-SCd3IMwYWmxOiqknt-7iw2m0wbY'
     }),
-    AgmDirectionModule
+    AgmDirectionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

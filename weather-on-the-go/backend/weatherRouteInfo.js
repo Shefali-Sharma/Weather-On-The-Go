@@ -36,12 +36,7 @@ var getWeatherRouteInfo = async (sourceLoc, destinationLoc) => {
     end: outE,
     wayPoints: weather
   }
-  // console.log(weather);
   return finalRes;
 };
-
-getWeatherRouteInfo('Buffalo, NY', 'Chicago').then ((response) => {
-  console.log(response);
-});
 
 module.exports.getWeatherRouteInfo = getWeatherRouteInfo;
