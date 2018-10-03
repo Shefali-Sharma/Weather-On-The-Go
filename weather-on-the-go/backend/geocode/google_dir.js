@@ -22,22 +22,17 @@ var getWayPoints = (sourceLoc, destinationLoc) => {
         };
 
         var wayPoints = [];
-        data.routes[0].legs[0].steps.forEach(element => {
-          var pointEnd = {
-            lat: element.end_location.lat,
-            lng: element.end_location.lng
-          };
-          var pointStart = {
-            lat: element.start_location.lat,
-            lng: element.start_location.lng
-          };
-          var point = {
-            end: pointEnd,
-            start: pointStart
-          };
-          wayPoints.push(point);
-        });
-
+        i = 0;
+        for (const element of data.routes[0].legs[0].steps){
+          if(i%3 == 0){
+            var pointStart = {
+              lat: element.start_location.lat,
+              lng: element.start_location.lng
+            };
+            wayPoints.push(pointStart);
+          }
+          i = i + 1;
+        }
         var res = {
           endLoc: endLoc,
           startLoc: startLoc,

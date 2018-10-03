@@ -14,17 +14,16 @@ var getSingleWeather = async(lat, lng) => {
 var getAllWeather = async (wayPointsList) => {
   let output = [];
   for (const element of wayPointsList){
-    let response = await weather.getWeatherInfo(element.start.lat, element.start.lng);
+    let response = await weather.getWeatherInfo(element.lat, element.lng);
     var place = {
-      lat: element.start.lat,
-      lng: element.start.lng,
+      lat: element.lat,
+      lng: element.lng,
       temp: response
     };
     output.push(place);
   }
   return output;
 };
-
 
 var getWeatherRouteInfo = async (sourceLoc, destinationLoc) => {
   var res = await geocode.getWayPoints(sourceLoc, destinationLoc);
@@ -41,9 +40,8 @@ var getWeatherRouteInfo = async (sourceLoc, destinationLoc) => {
   return finalRes;
 };
 
-
-getWeatherRouteInfo('Buffalo, NY', 'Chicago').then((response) => {
+getWeatherRouteInfo('Buffalo, NY', 'Chicago').then ((response) => {
   console.log(response);
-}, (errorMessage) => {
-  console.log(errorMessage);
 });
+
+module.exports.getWeatherRouteInfo = getWeatherRouteInfo;
