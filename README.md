@@ -65,3 +65,12 @@ For documentation on google_directions, visit:
 #### Installing google_directions
 ```npm i google_directions@0.6.0 --save```
 * At the time ```0.6.0``` was the latest version. Go ahead and install the latest version. Find version info on the Documentation url.
+
+### Firebase
+For documentation on firebase, visit: 
+```https://www.npmjs.com/package/geofire```
+
+#### Installing Geofire in Firebase
+```npm install geofire firebase --save```
+
+
