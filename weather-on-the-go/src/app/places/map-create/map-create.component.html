@@ -1,7 +1,7 @@
 <mat-card>
     <agm-map [latitude]="latitude" [longitude]="longitude">
-        <!-- <agm-direction [origin]="origin" [destination]="destination"></agm-direction> -->
-        <agm-marker [latitude]="wayPoint.lat" [longitude]="wayPoint.lng" *ngFor="let wayPoint of wayPoints; let i=index">
+        <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+        <agm-marker *ngFor="let wayPoint of wayPoints; let i=index" [latitude]="wayPoint.lat" [longitude]="wayPoint.lng">
             <agm-info-window [maxWidth]="200">
                 <ng-template>
                     <strong>{{ wayPoint.temp }}</strong>

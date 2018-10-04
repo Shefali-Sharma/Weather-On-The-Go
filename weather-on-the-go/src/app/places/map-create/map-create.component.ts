@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Place } from '../place.model';
-import { Map } from '../map.model';
 import { PlacesService } from '../places.services';
 import { Subscription} from 'rxjs';
 import { WeatherRoute } from '../weatherRoute.model';
+import { Map } from '../map.model';
+// import { AngularFireDatabase } from 'angularfire2/database';
+// import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-map-create',
@@ -15,26 +16,40 @@ export class MapCreateComponent implements OnInit, OnDestroy {
   latitude = 51.678418;
   longitude = 7.809007;
   // locationChosen = false;
-  origin: any;
-  destination: any;
+
+  markers: any;
+  origin = { lat: 51.678418, lng: 7.809007 };
+  destination = { lat: 51.678418, lng: 7.809007 };
   mapPlaces: WeatherRoute;
+  // lat: number;
+  // lng: number;
+  // temp: string;
+  wayPoints: Map[] = [];
   private placessSub: Subscription;
 
-  constructor(public placesService: PlacesService) {}
 
-  onChooseLocation(event) {
-    this.latitude = event.coords.lat;
-    this.longitude = event.coords.lng;
-    // this.locationChosen = true;
-    this.origin = { lat: 24.799448, lng: 120.979021 };
-    this.destination = { lat: 24.799524, lng: 120.975017 };
+  constructor(public placesService: PlacesService) {
+    // db.list()
+    //   .subscribe(arg => this.property = arg);
   }
 
-  ngOnInit() {
-    this.placesService.getPlaces();
+  // onChooseLocation(event) {
+  //   this.latitude = event.coords.lat;
+  //   this.longitude = event.coords.lng;
+  //   // this.locationChosen = true;
+  //   this.origin = { lat: 24.799448, lng: 120.979021 };
+  //   this.destination = { lat: 24.799524, lng: 120.975017 };
+  // }
+
+  async ngOnInit() {
+    // this.placesService.getPlaces();
     this.placessSub = this.placesService.getPlaceUpdateListner()
       .subscribe((places: WeatherRoute) => {
+        console.log('Here I am');
         this.mapPlaces = places;
+        this.origin = { lat: this.mapPlaces.src.lat, lng: this.mapPlaces.src.lng };
+        this.destination = { lat: this.mapPlaces.dest.lat, lng: this.mapPlaces.dest.lng };
+        this.wayPoints = this.mapPlaces.wayPoints;
       });
   }
 

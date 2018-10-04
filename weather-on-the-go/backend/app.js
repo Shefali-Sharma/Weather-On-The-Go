@@ -40,14 +40,16 @@ app.post("/api/startEnd", (req, res, next) => {
   // temp = req.body;
   // console.log(temp);
   console.log(req.body);
+
   var src = req.body["source"];
-  var dest = req.body["source"];
+  var dest = req.body["destination"];
   // console.log(place);
   // source: source, destination: destination
   // res.locals.source = src;
   // res.locals.destination = dest;
 
   weatherData(src, dest).then((item) => {
+    console.log(item);
     res.status(200).json({
       src: item.start,
       dest: item.end,
