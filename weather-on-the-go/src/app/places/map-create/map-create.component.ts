@@ -15,31 +15,15 @@ import { Map } from '../map.model';
 export class MapCreateComponent implements OnInit, OnDestroy {
   latitude = 51.678418;
   longitude = 7.809007;
-  // locationChosen = false;
 
   markers: any;
   origin = { lat: 51.678418, lng: 7.809007 };
   destination = { lat: 51.678418, lng: 7.809007 };
   mapPlaces: WeatherRoute;
-  // lat: number;
-  // lng: number;
-  // temp: string;
   wayPoints: Map[] = [];
   private placessSub: Subscription;
 
-
-  constructor(public placesService: PlacesService) {
-    // db.list()
-    //   .subscribe(arg => this.property = arg);
-  }
-
-  // onChooseLocation(event) {
-  //   this.latitude = event.coords.lat;
-  //   this.longitude = event.coords.lng;
-  //   // this.locationChosen = true;
-  //   this.origin = { lat: 24.799448, lng: 120.979021 };
-  //   this.destination = { lat: 24.799524, lng: 120.975017 };
-  // }
+  constructor(public placesService: PlacesService) {}
 
   async ngOnInit() {
     // this.placesService.getPlaces();

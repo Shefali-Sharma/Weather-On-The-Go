@@ -1,27 +1,13 @@
 <mat-card>
     <agm-map [latitude]="latitude" [longitude]="longitude">
-        <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
-        <agm-marker *ngFor="let wayPoint of wayPoints; let i=index" [latitude]="wayPoint.lat" [longitude]="wayPoint.lng">
-            <agm-info-window [maxWidth]="200">
-                <ng-template>
-                    <strong>{{ wayPoint.temp }}</strong>
-                </ng-template>
-            </agm-info-window>
-        </agm-marker>
+        <agm-direction [origin]="origin" [destination]="destination">
+          <agm-marker *ngFor="let wayPoint of wayPoints; let i=index" [latitude]="wayPoint.lat" [longitude]="wayPoint.lng">
+              <agm-info-window [maxWidth]="200" style="font:bold; color:black;">
+                <div style="font: bold; color: black;">
+                  <p>Current Temperature: {{ wayPoint.temp }}</p>
+                </div>
+              </agm-info-window>
+          </agm-marker>
+      </agm-direction>
     </agm-map>
 </mat-card>
-
-
-<!-- <agm-info-window>
-
-</agm-info-window> -->
-
-<!-- <agm-map [latitude]="latitude" [longitude]="longitude">
-    <agm-marker [latitude]="location.lat" [longitude]="location.lng" *ngFor="let location of locations; let i=index">
-        <agm-info-window [maxWidth]="200">
-            <ng-template>
-                <strong>{{location.title}}</strong>
-            </ng-template>
-        </agm-info-window>
-    </agm-marker>
-</agm-map> -->
