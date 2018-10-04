@@ -2,6 +2,8 @@ const express = require('express');
 const weather = require('./weatherRouteInfo');
 const bodyParser = require('body-parser');
 
+const Place = require('./models/place');
+
 const app = express();
 
 var weatherData = (src, dest) => {
@@ -32,37 +34,27 @@ app.use((req, res, next) => {
 });
 
 app.post("/api/startEnd", (req, res, next) => {
-  // var temp = {
-  //   src: string,
-  //   dest: string
-  // };
 
-  // temp = req.body;
-  // console.log(temp);
   console.log(req.body);
 
   var src = req.body["source"];
   var dest = req.body["destination"];
-  // console.log(place);
-  // source: source, destination: destination
-  // res.locals.source = src;
-  // res.locals.destination = dest;
 
   weatherData(src, dest).then((item) => {
-    console.log(item);
+
+    const place = new Place({
+      src: item.start,
+      dest: item.end,
+      wayPoints: item.wayPoints
+    });
+
+    console.log(place);
     res.status(200).json({
       src: item.start,
       dest: item.end,
       wayPoints: item.wayPoints
     });
-    // console.log(item);
   });
 })
-
-// app.use (req, res, next) {
-//   console.log(res.locals.source);
-
-//   console.log('Here');
-// };
 
 module.exports = app;
