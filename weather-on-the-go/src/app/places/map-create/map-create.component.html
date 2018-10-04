@@ -1,5 +1,27 @@
 <mat-card>
-    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
-        <agm-direction [origin]="origin" [destination]="destination"></agm-direction>
+    <agm-map [latitude]="latitude" [longitude]="longitude">
+        <!-- <agm-direction [origin]="origin" [destination]="destination"></agm-direction> -->
+        <agm-marker [latitude]="wayPoint.lat" [longitude]="wayPoint.lng" *ngFor="let wayPoint of wayPoints; let i=index">
+            <agm-info-window [maxWidth]="200">
+                <ng-template>
+                    <strong>{{ wayPoint.temp }}</strong>
+                </ng-template>
+            </agm-info-window>
+        </agm-marker>
     </agm-map>
 </mat-card>
+
+
+<!-- <agm-info-window>
+
+</agm-info-window> -->
+
+<!-- <agm-map [latitude]="latitude" [longitude]="longitude">
+    <agm-marker [latitude]="location.lat" [longitude]="location.lng" *ngFor="let location of locations; let i=index">
+        <agm-info-window [maxWidth]="200">
+            <ng-template>
+                <strong>{{location.title}}</strong>
+            </ng-template>
+        </agm-info-window>
+    </agm-marker>
+</agm-map> -->

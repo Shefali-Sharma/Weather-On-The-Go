@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyBxiKiXUCeFgpLlQ63uTXhQc7ygOrkcjnY',
+    authDomain: 'wise-env-218216.firebaseapp.com',
+    databaseURL: 'https://wise-env-218216.firebaseio.com',
+    projectId: 'wise-env-218216',
+    storageBucket: 'wise-env-218216.appspot.com',
+    messagingSenderId: '1059655472924'
+  },
+  googleMapsKey: 'AIzaSyAPrWXmgiHZfesvXuvtc3NsuGj0GbuvOsw'
 };
 
 /*

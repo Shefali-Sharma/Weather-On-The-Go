@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,12 @@ import {
     MatToolbarModule} from '@angular/material';
 import { AgmCoreModule } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
+import { AngularFireModule } from 'angularfire2';
+// import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireDatabaseModule } from '@angular/fire/database';
+// export const firebaseConfig = environmentFirebase.firebaseConfig;
+export const firebaseConfig = environment.firebaseConfig;
 
 import { AppComponent } from './app.component';
 import { PlaceCreateComponent } from './places/place-create/place-create.component';
@@ -31,8 +38,10 @@ import { HeaderComponent } from './header/header.component';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB09T0-SCd3IMwYWmxOiqknt-7iw2m0wbY'
+      apiKey: environment.googleMapsKey
     }),
     AgmDirectionModule,
     HttpClientModule

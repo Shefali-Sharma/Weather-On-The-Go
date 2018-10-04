@@ -73,4 +73,5 @@ For documentation on firebase, visit:
 #### Installing Geofire in Firebase
 ```npm install geofire firebase --save```
 
-
+### Installing body-parser
+```npm install --save body-parser```
