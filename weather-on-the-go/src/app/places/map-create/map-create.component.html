@@ -4,7 +4,7 @@
           <agm-marker *ngFor="let wayPoint of wayPoints; let i=index" [latitude]="wayPoint.lat" [longitude]="wayPoint.lng">
               <agm-info-window [maxWidth]="200" style="font:bold; color:black;">
                 <div style="font: bold; color: black;">
-                  <p>Current Temperature: {{ wayPoint.temp }}</p>
+                  <p>Current Temperature: {{ wayPoint.temp }} F</p>
                 </div>
               </agm-info-window>
           </agm-marker>

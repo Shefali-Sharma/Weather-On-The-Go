@@ -75,3 +75,26 @@ For documentation on firebase, visit:
 
 ### Installing body-parser
 ```npm install --save body-parser```
+
+### MongoDB
+For documentation on MongoDB: 
+```https://docs.mongodb.com/?_ga=2.33370558.1232252165.1538686586-1498401667.1534796860```
+
+#### Setting-up Database
+* Create an account at : ```https://www.mongodb.com/cloud/atlas``` for MongoDB Atlas.
+* Create a new cluster after selecting appropriate settings.
+* Under the 'Security' tab:
+    * MongoDB Users: Click on 'Add New User'. Create a username and password, and click on 'Read and write to any database'.
+    * IP Whitelist: Click on 'Add IP Address'. Click on 'Add Current IP Address'. 
+        * Only this IP will be allowed to access the database. No other IP address will be allowed. So, do keep in mind to change the IP if accessing database from another account.
+        * If you're away from the project for a couple of days (or maybe even after one day), you might've received a new local IP by your internet provider. Hence you should update that "IP Whitelist" if you're facing any connection issues!
+    
+#### Accessing MongoDB with Mongoose 
+For documentation on Mongoose:
+ * ```https://mongoosejs.com/```
+ * ```https://mongoosejs.com/docs/guide.html```
+
+#### Installing Mongoose
+```npm install --save mongoose```
+
+
