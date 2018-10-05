@@ -30,6 +30,7 @@ export class MapCreateComponent implements OnInit, OnDestroy {
     this.placessSub = this.placesService.getPlaceUpdateListner()
       .subscribe((places: WeatherRoute) => {
         console.log('Here I am');
+        // console.log(places);
         this.mapPlaces = places;
         this.origin = { lat: this.mapPlaces.src.lat, lng: this.mapPlaces.src.lng };
         this.destination = { lat: this.mapPlaces.dest.lat, lng: this.mapPlaces.dest.lng };
