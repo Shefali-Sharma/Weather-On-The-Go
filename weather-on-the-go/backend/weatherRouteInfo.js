@@ -25,6 +25,13 @@ var getAllWeather = async (wayPointsList) => {
   return output;
 };
 
+// var getLocationData = async (sourceLoc, destinationLoc) => {
+//   var res = await geocode.getWayPoints(sourceLoc, destinationLoc);
+//   console.log(res);
+
+//   return res;
+// }
+
 var getWeatherRouteInfo = async (sourceLoc, destinationLoc) => {
   var res = await geocode.getWayPoints(sourceLoc, destinationLoc);
   var outS = await getSingleWeather(res.startLoc.lat, res.startLoc.lng);

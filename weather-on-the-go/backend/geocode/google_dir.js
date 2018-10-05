@@ -52,7 +52,4 @@ var getWayPoints = (sourceLoc, destinationLoc) => {
   });
 
 };
-
-
-
 module.exports.getWayPoints = getWayPoints;
