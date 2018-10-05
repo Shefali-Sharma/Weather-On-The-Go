@@ -18,4 +18,4 @@ const placeSchema = mongoose.Schema({
   }]
 });
 
-module.exports = mongoose.model('Post', placeSchema);
+module.exports = mongoose.model('Place', placeSchema);

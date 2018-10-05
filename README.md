@@ -97,4 +97,16 @@ For documentation on Mongoose:
 #### Installing Mongoose
 ```npm install --save mongoose```
 
+### Connecting Express to MongoDB
+* Open MongoDB Cluster on Browser.
+* Under 'Overview', click on 'Connect'. Click on 'Connect Your Application'. 
+* Under 'Copy a connection string' - Click on 'SRV connection string (3.6+ driver)' (or whichever is the lastest driver the time).
+
+### To see your Database on Cloud
+* Open MongoDB Cluster on Browser.
+* Under 'Overview', click on 'Connect'. Click on 'Connect with Mongo Shell'. 
+* Download the package and store files in a location in your computer.
+* Open a terminal and go to the location where you placed your files. And then go into 'bin' folder (using 'cd').
+* Under the section - 'Connect via the Mongo Shell', click on 'Short SRV connection string (3.6+ shell)' (or whichever is the lastest shell the time).
+* Copy the command and paste it into your terminal and run. Enter your password when prompted.
 
