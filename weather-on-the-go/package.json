@@ -33,6 +33,7 @@
     "firebase": "^5.5.2",
     "geofire": "^4.1.2",
     "google_directions": "^0.6.0",
+    "moment": "^2.22.2",
     "mongoose": "^5.3.1",
     "request": "^2.88.0",
     "rxjs": "~6.2.0",

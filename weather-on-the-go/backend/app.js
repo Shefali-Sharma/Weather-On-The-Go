@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const latlng = require('./geocode/google_latlng');
 const Place = require('./models/place');
+const moment = require('moment');
 
 const app = express();
 
@@ -55,6 +56,8 @@ app.use((req, res, next) => {
 app.post("/api/startEnd", (req, res, next) => {
   var src = req.body["source"];
   var dest = req.body["destination"];
+  var dateTimeNow = moment();
+  console.log(dateTimeNow);
 
   latlngData(src, dest).then((latlngdata) => {
     Place.find()
@@ -68,6 +71,10 @@ app.post("/api/startEnd", (req, res, next) => {
       // console.log(docs["dest"]);
       // console.log(docs.wayPoints);
       if(docs.length){
+        var dateTimethen = moment();
+        console.log(dateTimethen);
+        var duration = moment.duration(dateTimethen.diff(dateTimeNow));
+        console.log('Time taken: ' + duration._milliseconds);
         res.status(200).json({
           src: docs[0].src,
           dest: docs[0].dest,
@@ -83,6 +90,10 @@ app.post("/api/startEnd", (req, res, next) => {
             wayPoints: item.wayPoints
           });
           place.save();
+          var dateTimethen = moment();
+          console.log(dateTimethen);
+          var duration = moment.duration(dateTimethen.diff(dateTimeNow));
+          console.log('Time taken: ' + duration._milliseconds);
           res.status(200).json({
             src: item.start,
             dest: item.end,
