@@ -102,7 +102,7 @@ For documentation on Mongoose:
 * Under 'Overview', click on 'Connect'. Click on 'Connect Your Application'. 
 * Under 'Copy a connection string' - Click on 'SRV connection string (3.6+ driver)' (or whichever is the lastest driver the time).
 
-### To see your Database on Cloud
+#### To see your Database on Cloud
 * Open MongoDB Cluster on Browser.
 * Under 'Overview', click on 'Connect'. Click on 'Connect with Mongo Shell'. 
 * Download the package and store files in a location in your computer.
@@ -110,3 +110,15 @@ For documentation on Mongoose:
 * Under the section - 'Connect via the Mongo Shell', click on 'Short SRV connection string (3.6+ shell)' (or whichever is the lastest shell the time).
 * Copy the command and paste it into your terminal and run. Enter your password when prompted.
 
+### Accessing database
+* Once logged-in, use command ```use <database-name>```
+* Command:
+    * ```help```: to see all availoable commands
+    * ```show collections```: to all collections in the database (like tables in the SQL database).
+
+### Time Difference using 'moment'
+For documentation on moment:
+```https://www.npmjs.com/package/moment```
+
+#### Installing moment: 
+```npm install --save moment```
