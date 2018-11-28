@@ -8,7 +8,7 @@ const moment = require('moment');
 
 const app = express();
 
-mongoose.connect("mongodb+srv://shefali9222:o18Hk5Ow6mxiqTAA@cluster0-lqt5b.mongodb.net/weather-route-data1?retryWrites=true")
+mongoose.connect("mongodb+srv://shefali9222:o18Hk5Ow6mxiqTAA@cluster0-lqt5b.mongodb.net/weather-route-data4?retryWrites=true")
   .then(() => {
     console.log('Connected to database!');
   })

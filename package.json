@@ -9,6 +9,7 @@
   "author": "Shefali Sharma",
   "license": "ISC",
   "dependencies": {
+    "event-stream": "^3.3.4",
     "express": "^4.16.3",
     "request": "^2.88.0"
   },
